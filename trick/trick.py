@@ -10,4 +10,18 @@ def floatPointAccuracy():
 	print equal(b,a)
 #floatPointAccuracy()
 
+#Bisection search by Geyang
+def bisearch(nums, key):
+	if (key > nums[-1]) or (key < nums[0]):
+		print "Not Found"
+	else:
+		if nums[len(nums)/2] == key:
+			print "Found"
+		else:
+			if nums[len(nums)/2] < key:
+				bisearch(nums[len(nums)/2:],key)
+			else:
+				bisearch(nums[0:len(nums)/2],key)
+
+bisearch([1, 5, 7, 9, 10, 13, 17, 19, 27],27) 
 
